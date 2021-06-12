@@ -1,0 +1,8 @@
+[28-Oct-2020 07:32:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Tests\TestCase' not found in /home/ensfep5/public_html/finanzas/api/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/tests/Feature/ExampleTest.php on line 8
+[26-Jan-2021 10:37:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Tests\TestCase' not found in /home/ensfep5/public_html/finanzas/api/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/tests/Feature/ExampleTest.php on line 8

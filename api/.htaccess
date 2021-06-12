@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "&DPl3C~%z9q2021"
+AuthUserFile "/home/ensfep5/.htpasswds/public_html/inscripcion/api/passwd"
+require valid-user
+
+Options -index

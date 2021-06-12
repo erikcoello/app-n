@@ -1,0 +1,90 @@
+[28-Oct-2020 07:30:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[28-Oct-2020 07:30:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[28-Oct-2020 07:30:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[28-Oct-2020 07:30:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_09_21_164111_create_projects_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_09_21_164111_create_projects_table.php on line 7
+[28-Oct-2020 07:31:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_172844_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_172844_create_roles_table.php on line 7
+[28-Oct-2020 07:31:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_175459_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_175459_create_permissions_table.php on line 7
+[28-Oct-2020 07:31:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_224934_create_users_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_224934_create_users_roles_table.php on line 7
+[28-Oct-2020 07:31:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233217_create_users_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233217_create_users_permissions_table.php on line 7
+[28-Oct-2020 07:31:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233716_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233716_create_role_permissions_table.php on line 7
+[28-Oct-2020 07:31:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_06_231350_create_cargos_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_06_231350_create_cargos_table.php on line 7
+[28-Oct-2020 07:31:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_07_101049_create_cargoAlumno_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_07_101049_create_cargoAlumno_table.php on line 7
+[28-Oct-2020 07:31:05 UTC] PHP Parse error:  syntax error, unexpected 'Table' (T_STRING), expecting '{' in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_13_155448_create_attacheds_table.php on line 7
+[26-Jan-2021 10:35:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[26-Jan-2021 10:35:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[26-Jan-2021 10:35:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[26-Jan-2021 10:35:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_09_21_164111_create_projects_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_09_21_164111_create_projects_table.php on line 7
+[26-Jan-2021 10:35:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_172844_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_172844_create_roles_table.php on line 7
+[26-Jan-2021 10:35:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_175459_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_175459_create_permissions_table.php on line 7
+[26-Jan-2021 10:35:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_224934_create_users_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_224934_create_users_roles_table.php on line 7
+[26-Jan-2021 10:35:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233217_create_users_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233217_create_users_permissions_table.php on line 7
+[26-Jan-2021 10:35:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233716_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_03_233716_create_role_permissions_table.php on line 7
+[26-Jan-2021 10:35:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_06_231350_create_cargos_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_06_231350_create_cargos_table.php on line 7
+[26-Jan-2021 10:35:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_07_101049_create_cargoAlumno_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_07_101049_create_cargoAlumno_table.php on line 7
+[26-Jan-2021 10:35:46 UTC] PHP Parse error:  syntax error, unexpected 'Table' (T_STRING), expecting '{' in /home/ensfep5/public_html/finanzas/api/database/migrations/2020_10_13_155448_create_attacheds_table.php on line 7

@@ -1,0 +1,107 @@
+
+@extends('layout')
+
+@section('title', $alumno)
+
+@section('content')
+<div class="row py-lg-2">
+    <div class="col-md-12">
+        <h3>@lang('alumno')</h3>
+         @foreach($alumno as $alumnoItem)
+         <div class="card-body">
+        <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> <thead> <tr> <th>{{ $alumnoItem->id_alumno }} </th>  <th>{{ $alumnoItem->matricula }} </th>
+                      <th> {{ $alumnoItem->nombre }} {{ $alumnoItem->apellido_paterno }} 
+                       {{ $alumnoItem->apellido_materno }}       </th>          
+                       @endforeach
+                       
+                      {{--  <th>Total de Pagos Realizados</th> <th>{{ $monto }}</th>
+                       <th>Total de Cargos</th> <th>{{ $saldo }}</th>
+                       <th>Adeudo</th> <th>{{ $diferiencia }}</th>
+                       --}} </tr>
+                       </thead>
+                        </table> </div></div>
+        
+    </div>
+    <hr>
+
+</div>{{-- row py-lg2 --}}
+
+   <!-- DataTables Example -->
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Historial Pagos del Alumno</div>
+    <div class="card-body">
+        <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id_alumno</th>
+            <th>Ciclo_escolar</th>
+            <th>Semestre</th>
+            <th>Fecha de Cargo</th>
+               {{--  <th>Descripción</th>
+ --}}            <th>Herramientas</th>
+            {{-- 
+            <th>Permisos</th>
+            <th>Herramientas</th>
+        --}} </tr>
+         </thead>
+
+
+            <tfoot>
+        <tr>
+            <th>Id</th>
+            <th>Id_alumno</th>
+            <th>Ciclo_escolar</th>
+            <th>Semestre</th>
+            <th>Fecha de Cargo</th>
+           {{--  <th>Descripción</th>
+ --}}            <th>Herramientas</th>
+            {{-- 
+            <th>Permisos</th>
+            <th>Herramientas</th>
+        --}} 
+            </tr>
+             
+            </tfoot>
+
+    </thead>
+        <tbody>
+
+            @foreach($cargo as $cargoItem)
+            <tr>
+                <td>{{ $cargoItem->id }}</td>
+               <td> {{ $cargoItem->id_alumno }} </td>
+                <td> {{ $cargoItem->ciclo_escolar }} </td>
+                <td>  {{$cargoItem->semestre }}</td>
+                <td>{{ $cargoItem->created_at }}</td>
+                {{-- <td>{{ $cargoItem->name }} </td>
+                <td>{{ $cargoItem->description }}</td>
+ --}}
+     <td>
+  @can('delete',$cargoItem)    
+  <form method="POST" action="{{route('cargo-alumno.destroy', $cargoItem)}} " >
+    @csrf @method('DELETE')
+   <button><i class="fas fa-trash-alt"></i></button> 
+   
+</form>
+@endcan
+
+    {{--<a href=" {{ route('alumnos.imagen', $pagoItem ) }} "><i class="fa fa-paperclip"></i></a> --}} 
+   {{--  @endcan --}}
+    {{-- <a href=" {{ route('descargarPDF', $cargoItem) }} "><i class="fa fa-edit fa-1x pr-2"></i></a>
+ --}}
+ {{-- @can('delete',$cargoItem)
+ <form method="POST" action="{{route('alumnos.destroy', $cargoItem)}} " >
+    @csrf @method('DELETE')
+    <button><i class="fas fa-trash-alt"></i></button>
+</form> --}}
+{{-- @endcan
+<a  target="_blank" href="/download/{{$cargoItem->id_pago}}"><i class="fa fa-paperclip fa-1x pr-2"></i></a> --}}
+ </td>   
+  @endforeach              
+@endsection

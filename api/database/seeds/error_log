@@ -1,0 +1,8 @@
+[28-Oct-2020 07:31:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Seeder' not found in /home/ensfep5/public_html/finanzas/api/database/seeds/DatabaseSeeder.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/seeds/DatabaseSeeder.php on line 5
+[26-Jan-2021 10:35:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Seeder' not found in /home/ensfep5/public_html/finanzas/api/database/seeds/DatabaseSeeder.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/database/seeds/DatabaseSeeder.php on line 5

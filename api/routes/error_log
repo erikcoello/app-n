@@ -1,0 +1,32 @@
+[28-Oct-2020 07:32:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/ensfep5/public_html/finanzas/api/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/api.php on line 17
+[28-Oct-2020 07:32:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Broadcast' not found in /home/ensfep5/public_html/finanzas/api/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/channels.php on line 16
+[28-Oct-2020 07:32:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Artisan' not found in /home/ensfep5/public_html/finanzas/api/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/console.php on line 17
+[28-Oct-2020 07:32:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/ensfep5/public_html/finanzas/api/routes/web.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/web.php on line 4
+[26-Jan-2021 10:36:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/ensfep5/public_html/finanzas/api/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/api.php on line 17
+[26-Jan-2021 10:36:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Broadcast' not found in /home/ensfep5/public_html/finanzas/api/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/channels.php on line 16
+[26-Jan-2021 10:36:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Artisan' not found in /home/ensfep5/public_html/finanzas/api/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/console.php on line 17
+[26-Jan-2021 10:36:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Auth' not found in /home/ensfep5/public_html/finanzas/api/routes/web.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/routes/web.php on line 4

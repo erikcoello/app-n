@@ -1,0 +1,74 @@
+@extends('layout')
+
+@section('content')
+<div class="row py-lg-2">
+    <div class="col-md-6">
+        <h2>Lista de Roles Registrados</h2>
+    </div>
+     <div class="col-md-6">
+            <a href="{{route('roles.create')}}" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear Nuevo Rol</a>
+
+</div>
+    
+</div>{{-- row py-lg2 --}}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Tabla Roles</div>
+    <div class="card-body">
+        <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Role</th>
+            <th>Slug</th>
+            <th>Permission</th>
+            <th>Tools</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach ($roles as $role)
+        <tr>
+            <td>
+            {{ $role->id }}
+            </td>
+             <td>
+            {{ $role->name }}
+            </td>
+             <td>
+            {{ $role->slug }}
+            </td>
+             <td>
+                            @if ($role->permissions != null)
+                                    
+                                @foreach ($role->permissions as $permission)
+                                <span class="badge badge-secondary">
+                                    {{ $permission->name }}                                    
+                                </span>
+                                @endforeach
+                            
+                            @endif
+                        </td>
+           
+             
+              <td>
+                <a href="{{ route('roles.show', $role->id ) }} "><i class="fa fa-eye"></i></a>
+                            <a href="{{ route('roles.edit', $role->id ) }} "><i class="fa fa-edit"></i></a>
+                             <form method="POST" action="{{route('roles.destroy', $role->id)}} " >
+                                @csrf @method('DELETE')
+    <button><i class="fas fa-trash-alt"></i></button>
+</form>
+                            
+              </td>
+        </tr>
+        @endforeach
+    </tbody>
+
+</table>
+
+
+@endsection

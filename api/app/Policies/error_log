@@ -1,0 +1,14 @@
+[28-Oct-2020 07:30:34 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/AlumnosPolicy.php on line 10
+[28-Oct-2020 07:30:35 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/CargoPolicy.php on line 9
+[28-Oct-2020 07:30:36 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/CategoriesPolicy.php on line 9
+[28-Oct-2020 07:30:36 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/InscripcionfinanzaPolicy.php on line 9
+[26-Jan-2021 10:35:13 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/AlumnosPolicy.php on line 10
+[26-Jan-2021 10:35:13 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/CargoAlumnoPolicy.php on line 9
+[26-Jan-2021 10:35:14 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/CargoPolicy.php on line 9
+[26-Jan-2021 10:35:15 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/CategoriesPolicy.php on line 9
+[26-Jan-2021 10:35:15 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/ControlEscolarPolicy.php on line 8
+[26-Jan-2021 10:35:16 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/EstudiantePolicy.php on line 9
+[26-Jan-2021 10:35:17 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/InReinscripcionPolicy.php on line 8
+[26-Jan-2021 10:35:17 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/InscripcionfinanzaPolicy.php on line 9
+[26-Jan-2021 10:35:18 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/OfficialPolicy.php on line 8
+[26-Jan-2021 10:35:19 UTC] PHP Fatal error:  Trait 'Illuminate\Auth\Access\HandlesAuthorization' not found in /home/ensfep5/public_html/finanzas/api/app/Policies/SubirCredencialPolicy.php on line 10

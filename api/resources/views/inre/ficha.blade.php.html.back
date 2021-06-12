@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Recibo Finanzas ENSFEP</title>
+    <link rel="stylesheet" href="{{asset('css/ficha_escolar.css')}}">
+   
+</head>
+
+<body>
+<!--  <div id='container'>
+                <img src="{{ asset('img/front.jpg') }}">
+    </div>-->
+    <div class="container">
+   <div class="row encabezado col-md-12">
+    <div class="sep col-md-2"> 
+        <img src="{{ asset('img/sep.png') }}">
+         </div>
+         <div class="texto-sep col-md-4">
+           <h1>SECRETARÍA DE EDUCACIÓN PÚBLICA<br />
+                ESCUELA NORMAL SUPERIOR FEDERALIZADA 
+                DEL ESTADO DE PUEBLA <br />
+                  CLAVE: 21DNL0006L</h1> 
+
+         </div>
+    <div class="federalizada col-md-2">     
+   <img src="{{ asset('img/ensfep_2015.png') }}">
+       </div>
+    </div>
+    <hr>
+    <div class="form-row">
+   
+    <h3 class="espacio-horizontal">FECHA DE INSCRIPCIÓN  {{$fecha_inre->fecha_in_re}} </h3><h3>@if($semestreCurso->id_semestre==1)    FORMATO INSCRIPCIÓN @else   FORMATO REINSCRIPCIÓN  @endif</h3> <h3 class="espacio-horizontal">Folio: {{$semestreCurso->ciclo_escolar . $alumno->curp . $alumno->id_alumno }}</h3>
+     
+     <div class="form-group foto col-md-2 text-center">
+      <img class= "box" src="{{ asset('img/foto2.jpg') }}">
+      </div>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Curp</th>
+      <th scope="col">edad</th>
+      <th scope="col">Matrícula</th>
+      <th scope="col">celular</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+
+    <tr class="table-primary">
+      <td>{{$alumno->nombre .' '.$alumno->apellido_paterno . ' ' . $alumno->apellido_materno}}</td>
+      <td>{{$alumno->curp}}</td>
+      <td>{{$alumno->edad}}</td>
+      <td>{{$alumno->matricula}} </td>
+      <td>{{$alumno->celular}} </td>
+    </tr>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Seguro Social</th>
+      <th scope="col">Tipo Sanguineo</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th colspan="2" scope="col">Tel. Casa</th>
+    </tr>
+    <tr class="table-primary">
+      <td>{{$alumno->correo}}</td>
+      <td>{{$alumno->nss}}</td>
+      <td>{{$alumno->sangre}}</td>
+      <td>{{$alumno->fecha_nacimiento}} </td>
+      <td colspan="2">{{$alumno->telefono}} </td>
+    </tr>
+     <tr>
+      <th scope="col">Edo. Civil</th>
+      <th scope="col">Hijos</th>
+      <th scope="col">Discapacidades</th>
+      <th scope="col">Alergias</th>
+      <th scope="col">Enfermedades Cronicas</th>
+    </tr>
+    <tr class="table-primary">
+      <td>{{$alumno->edo_civil}}</td>
+      <td>{{$alumno->hijos}}</td>
+      <td>{{$alumno->discapacidades}}</td>
+      <td>{{$alumno->alergias}} </td>
+      <td>{{$alumno->enfermedades}} </td>
+    </tr>
+     <tr>
+      <th scope="col">Domicilio</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+
+      <th scope="col">Lugar de Nac.</th>
+       <th scope="col"></th>
+      
+      
+    </tr>
+    <tr class="table-primary">
+    
+     <td colspan="3" scope="row">{{ $alumno->calle . ' ' . $alumno->numero_exterior . ' ' . $alumno->numero_interior . ' ' .$alumno->colonia. ' ' . $alumno->codigo_postal . ' ' . $alumno->municipio . ' ' . $alumno->estado }}
+    </td>
+     <td colspan="2" scope="col">{{$alumno->lugar_nacimiento}}</td>
+
+     </tr>
+      <tr>
+      <th colspan="2" scope="col">Nombre Tutor</th>
+      
+      <th scope="col">Telefono de Casa</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Email</th>
+    </tr>
+     <tr class="table-primary">
+      <td colspan="2">{{$alumno->padre_tutor}}</td>
+      <td>{{$alumno->tel_tutor}}</td>
+      <td>{{$alumno->cel_tutor}}</td>
+      <td>{{$alumno->mail_tutor}} </td>
+    </tr>
+      <th colspan="2" scope="col">Licenciatura</th>
+      <th scope="col">Semestre</th>
+      <th scope="col">Grupo</th>
+      <th scope="col">Ciclo_escolar</th>
+    </tr>
+     <tr class="table-primary">
+      <td colspan="2" >{{$nombreLic->nombreEspecialidad}}</td>
+      
+      <td>{{$semestreCurso->semestre}}</td>
+      <td>{{$licenciatura->grupo}}</td>
+      <td>{{$semestreCurso->ciclo_escolar}} </td>
+    </tr>
+  </tbody>
+</table>  
+ </div>
+    </div><br><br><br><br>
+
+ <div class="form-row ">
+ 
+
+      <div class="col-md-4 text-center negritas">
+        DANIELA SOTO NOCELO <br>_________________________________________
+              <br>  FIRMA JEFA DE OFICINA <br>  DE CONTROL ESCOLAR
+      </div>
+     
+      <div class="col-md-4 text-center negritas base">
+        <img src="{{asset("storage/$credencial->firma") }} "width=150px;>
+     <br> _________________________________________ <br>
+         
+       FIRMA ASPIRANTE
+      </div>
+      <div class="col-md-4 text-center negritas ">
+        DR. GERARDO PAUL ARVIZU SERAPIO <br> _________________________________________
+         <br> FIRMA DIRECTOR GENERAL
+      </div>
+     
+     
+  
+</div>
+   <hr><br>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+[28-Oct-2020 07:30:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Auth\Middleware\Authenticate' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/Authenticate.php on line 7
+[28-Oct-2020 07:30:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/CheckForMaintenanceMode.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/CheckForMaintenanceMode.php on line 7
+[28-Oct-2020 07:30:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/EncryptCookies.php on line 7
+[28-Oct-2020 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\TrimStrings' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrimStrings.php on line 7
+[28-Oct-2020 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Http\Middleware\TrustHosts' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustHosts.php on line 7
+[28-Oct-2020 07:30:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Fideloper\Proxy\TrustProxies' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustProxies.php on line 8
+[28-Oct-2020 07:30:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[26-Jan-2021 10:35:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Auth\Middleware\Authenticate' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/Authenticate.php on line 7
+[26-Jan-2021 10:35:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/CheckForMaintenanceMode.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/CheckForMaintenanceMode.php on line 7
+[26-Jan-2021 10:35:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/EncryptCookies.php on line 7
+[26-Jan-2021 10:35:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\TrimStrings' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrimStrings.php on line 7
+[26-Jan-2021 10:35:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Http\Middleware\TrustHosts' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustHosts.php on line 7
+[26-Jan-2021 10:35:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Fideloper\Proxy\TrustProxies' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/TrustProxies.php on line 8
+[26-Jan-2021 10:35:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Http/Middleware/VerifyCsrfToken.php on line 7

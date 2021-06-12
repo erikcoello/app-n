@@ -1,0 +1,379 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Alumno;
+use App\CicloEscolarA;
+use App\Categories;
+use App\Semestre;
+use App\Inscripcionfinanza;
+use Carbon\Carbon;
+use App\CargoAlumno;
+use DB;
+use Image;
+use Str;
+use App\Attached;
+use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Storage; 
+
+class AlumnosController extends Controller
+{
+
+     public function __construct()
+   {
+    $this->middleware('auth');
+   } 
+
+
+     public function before($user, $ability)
+{
+    if ($user->isAdmin()) {
+        return true;
+    }
+}
+
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+
+     */
+
+  public function index(Request $request)
+    {
+        
+
+
+        $id_alumno  = $request->get('id_alumno');
+        $matricula = $request->get('matricula');
+        $nombre   = $request->get('nombre');
+
+        $alumnos = Alumno::orderBy('id_alumno', 'DESC')
+            ->id_alumno($id_alumno)
+            ->matricula($matricula)
+            ->nombre($nombre)
+            ->where('alumnos.estatus','!=','definitiva')
+            ->paginate();
+
+        return view('alumnos.index', compact('alumnos'));
+    
+       
+  
+ }//fin index
+
+
+
+ 
+
+ public function show($id_alumno) 
+ {
+$semestreCurso = DB::table('semestre')
+    ->select('semestre.semestre','ciclo_escolar.ciclo_escolar')
+                            ->join('semestre_curso','semestre_curso.id_semestre','=','semestre.id_semestre')
+                            ->join('ciclo_escolar','semestre_curso.ciclo_escolar', '=', 'ciclo_escolar.id_ciclo')
+                            ->where('semestre_curso.id_alumno','=', $id_alumno)->first();
+
+     $Especialidad=DB::table('ingreso')->select('nombreEspecialidad','grupo')
+        ->join('catalogoespecialidades', 
+            'ingreso.id_especialidad','=','catalogoespecialidades.idEspecialidad')
+            ->where('ingreso.id_alumno', '=', $id_alumno)->first();  
+                                                 
+            if ($Especialidad->grupo == null) {
+                $Especialidad-> grupo = 'Único';
+                # code...
+            }
+      /// falta corregir la consulta no pedir todo el array de informacion la variable alumno se le pasa a la vista alumnos.show
+          //$alumno = Alumno::where('id_alumno','=', $id)->get();
+
+    $alumno = Alumno::select('alumnos.id_alumno', 'alumnos.matricula' ,'alumnos.nombre', 
+      'alumnos.apellido_paterno', 'alumnos.apellido_materno')->where('alumnos.id_alumno', '=', $id_alumno)->orderBy('alumnos.apellido_paterno','desc')->first();
+
+    $pago = Inscripcionfinanza::select('inscripcionfinanzas.id','inscripcionfinanzas.id_alumno','attached.id_pago','inscripcionfinanzas.type','inscripcionfinanzas.amount','inscripcionfinanzas.created_at','inscripcionfinanzas.categories_id','inscripcionfinanzas.description','inscripcionfinanzas.id_ciclo','categories.name','semestre.semestre')
+        -> join('attached','inscripcionfinanzas.id', '=', 'attached.id_pago')
+        ->join('categories', 'inscripcionfinanzas.categories_id','=', 'categories.id')
+        ->join('semestre','inscripcionfinanzas.semestre', '=', 'semestre.id_semestre')
+        ->where('inscripcionfinanzas.id_alumno', '=',  $id_alumno)
+        ->orderBy('inscripcionfinanzas.id','desc')->paginate();
+
+        
+      $monto = Inscripcionfinanza::where('id_alumno','=',$id_alumno)->where('type','=','add')->sum('amount');
+       
+
+                 $saldo = DB::table('cargoalumno')->join('cargos','cargoalumno.id_ciclo','=', 'cargos.id_ciclo')->select('cargoalumno.*', 'cargos.*')
+                             ->where('cargoalumno.id_alumno', '=', $id_alumno) 
+                               ->whereColumn('cargoalumno.id_semestre', '=', 'cargos.id_semestre')->SUM('cargos.amount');
+
+                                    if ($monto == $saldo) {
+                                   $diferiencia = "El estudiante no presenta adeudo"; 
+                                }elseif ($monto > $saldo){
+                                    $diferiencia = "El Estudiante tiene más pagos registrados de lo que debe";
+                                   } elseif($saldo != null){
+                                if($monto < $saldo){
+                                    $adeudo = $saldo - $monto;
+                                    $diferiencia = 'El Estudiante debe un acumulado de: $'.$adeudo;
+                                }
+                             }else{
+                                 $diferiencia = 'Aún no se asignan cargos para el estudiante';
+                             }
+
+                             //  $diferiencia = $monto - $saldo  ;
+
+
+          return view('alumnos.show', compact('alumno', 'pago','monto','saldo','diferiencia','semestreCurso','Especialidad'));
+    }  //fin show
+
+    //formulario que obtiene $id_alumno que le vamos agregar el pago el request es para obtener datos del form
+    public function create(Request $request, $id_alumno)
+
+     {
+        ///dd($id_alumno);
+               $this->authorize('create', Alumno::class);
+      
+      $alumno = Alumno::where('id_alumno','=', $id_alumno)->get('id_alumno');
+      $type = $request->input('type');
+      $data1 = Semestre::all();
+      $data2 = Categories::all();
+      $data3 = CicloEscolarA::all();
+     // $now = Carbon::now();
+
+
+      return view('alumnos.create',[
+        'data1'=>$data1,
+        'type'=>$type,
+        'data2' =>$data2,
+        'data3' =>$data3,
+        'id_alumno' =>$alumno,
+     //   'now5' => $now,
+        
+
+
+    ]); 
+  } 
+
+
+
+
+     public function downloadFile($id_pago){
+       
+            $data_file = attached::where('id_pago',$id_pago)->first();
+            //dd($data_file);
+            return response()->file(storage_path('app/public/'.$data_file->path));
+       
+    }
+/// Reques nos devuelve los datos insertados por el usuario del formulario
+  public function store(Request  $request){
+                   $this->authorize('create', Alumno::class);
+
+
+     $hoy=date('Y-m-d H:m:s',strtotime('today'));   
+     $adjunto = $request->file('path');
+     $str = str_replace(",", "", $request->amount);
+     
+     request()->validate([
+        'id_alumno' => 'required|min:3',
+        'type' => 'required',
+        'amount' => 'required',
+        'created_at' => 'required',
+        'id_ciclo' => 'required',
+        'semestre_id' => 'required',
+        'categories_id' => 'required',
+        'description' => 'required',
+        'fecha_prorroga'=>'required',
+        'path' => 'required',
+        
+        
+     ]);
+     
+      $busquedaD = Inscripcionfinanza::select('id_alumno')
+                                    ->where('id_alumno','=',$request->id_alumno)
+                                    ->where('type','=',$request->type)
+                                    ->where('amount', '=', $str)
+                                    ->where('id_ciclo', '=', $request->id_ciclo)
+                                    ->where('semestre', '=',$request->semestre_id)
+                                    ->where('categories_id','=',$request->categories_id)
+                                    ->exists();
+
+        
+      if($busquedaD >= 1)  {        
+        return redirect()->route('alumnos.index')->with('status', 'el pago ya existe');
+    }  else {
+
+     
+     
+     
+     
+ $id=Inscripcionfinanza::insertGetId([
+      'id_alumno' => $request->id_alumno,   
+      'type'=> $request->type,
+      'amount'=> $str,
+      'created_at' => $request->created_at,
+      'updated_at' => $request->created_at,
+      'id_ciclo'=>  $request->id_ciclo,
+      'semestre'=>  $request->semestre_id,
+      'categories_id'=>$request->categories_id,
+      'fecha_prorroga'=>$request->fecha_prorroga,
+      'description'=>$request->description
+
+  ]); 
+  
+  
+  if($adjunto!=null){
+        /* $file = $request->path->store('attached','public');
+           $id2=attached::insertGetId([
+              'path' =>$file,
+              'created_at' => $hoy,
+              'updated_at'=>   $hoy,
+              'id_pago'=>  $id,
+            ]);   
+            
+             'public' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/api/storage',
+            'visibility' => 'public',
+        ],
+        
+    */  
+        $nombre = Str::random(10) . $request->path->getClientOriginalName();
+        //$nombre = $request->path->getClientOriginalName();
+
+            $ruta = storage_path() .'/app/public/attached/'. $nombre;
+          
+            Image::make($request->path)
+            ->resize(800, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($ruta);       
+            
+             $id2=attached::insertGetId([
+              'path' =>'attached'.'/'.$nombre,
+              'created_at' => $hoy,
+              'updated_at'=>   $hoy,
+              'id_pago'=>  $id,
+              ]);
+
+    
+      
+      
+  }
+}
+       
+    return redirect()->route('alumnos.index')->with('status', 'el pago fue creado  con exito');
+
+} 
+        
+
+
+     public function edit(Request $request, $id_pago)
+    {
+       $data = Inscripcionfinanza::where('id',$id_pago)->first();
+
+            $this->authorize('edit',$data);
+
+        /// list devuelve le valor del array sin la key
+      // $data = Inscripcionfinanza::where('id','=', $id_pago)->get();
+
+            
+      $data1 = Semestre::all();
+      $data2 = Categories::all();
+       $data3 = CicloEscolarA::all();
+
+      if($attached = attached::where('id_pago',$id_pago)->exists()){
+            $attached = attached::where('id_pago',$id_pago)->first();
+            $data->setAttribute('attached',$attached);
+          }else{
+            $data->setAttribute('attached',null);
+          }
+
+     return view('alumnos.edit',[  
+        'data'=>$data,
+        'data1'=>$data1,
+        'data2' =>$data2,
+        'data3' =>$data3,
+
+    ]);
+ }
+
+///funciona para probar que envia el form edti
+   /* public function update (Request $request, $id_pago) {
+        return $request;
+    }
+*/
+public function update(Request $request, $id_pago)
+        {
+                $editPago = Inscripcionfinanza::find($id_pago);
+
+                $this->authorize('edit',$editPago);
+
+                $now = Carbon::now();
+         //  $currentData = $now->format('y-m-d');
+                $editPago = Inscripcionfinanza::find($id_pago);
+
+
+                request()->validate([
+        
+        'type' => 'required',
+        'amount' => 'required',
+        'id_ciclo' => 'required',
+        'semestre_id' => 'required',
+        'categories_id' => 'required',
+        'fecha_prorroga'=>'required',
+        'description' => 'required',
+        
+     ]);
+
+    $editPago->updated_at  = $now;
+    $editPago->type  = $request->type; 
+    $str = str_replace(",", "", $request->amount);
+    $editPago->amount  = $str;  
+    $editPago->id_ciclo  = $request->id_ciclo;  
+    $editPago->semestre  = $request->semestre_id;  
+    $editPago->categories_id  = $request->categories_id;
+    $editPago->fecha_prorroga  = $request->fecha_prorroga;             
+    $editPago->description  = $request->description;
+    $editPago->save();
+        
+return redirect()->route('alumnos.index')->with('status', 'el proyecto fue actualizado con éxito');
+        }
+  
+
+
+
+/* original public function destroy($id_pago){
+
+            $editPago = Inscripcionfinanza::find($id_pago);
+                $this->authorize('delete',$editPago);
+
+
+        $editPago = Inscripcionfinanza::find($id_pago);
+      
+
+        $editPago->delete();
+         return redirect()->route('alumnos.index')->with('status', 'el proyecto fue eliminado con exito');
+    }
+*/
+
+ public function destroy(Request $request){
+
+            $eliminar = Inscripcionfinanza::find($request->pago_item);
+         
+                $this->authorize('delete',$eliminar);
+
+                $liga= attached::where('id_pago',$request->pago_item)->first();
+      $data_file = attached::where('id_pago',$request->pago_item)->Pluck('path');
+      // dd($data_file);
+           $imgOld =$data_file[0];
+//dd($imgOld);
+            // dd($data_file);
+        
+             unlink(storage_path('app/public/'.$imgOld));
+             // dd($imgOld);
+    
+      
+        $eliminar->delete();
+        $liga->delete();
+        // return redirect()->route('alumnos.index')->with('status', 'el proyecto fue eliminado con exito');
+        return back();
+    }
+
+}//fin 

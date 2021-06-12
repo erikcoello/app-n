@@ -1,0 +1,40 @@
+[28-Oct-2020 07:30:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/AppServiceProvider.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/AppServiceProvider.php on line 9
+[28-Oct-2020 07:30:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\AuthServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/AuthServiceProvider.php on line 8
+[28-Oct-2020 07:30:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/BroadcastServiceProvider.php on line 8
+[28-Oct-2020 07:30:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/EventServiceProvider.php on line 10
+[28-Oct-2020 07:30:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/RouteServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/RouteServiceProvider.php on line 8
+[26-Jan-2021 10:35:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/AppServiceProvider.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/AppServiceProvider.php on line 9
+[26-Jan-2021 10:35:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\AuthServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/AuthServiceProvider.php on line 8
+[26-Jan-2021 10:35:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/BroadcastServiceProvider.php on line 8
+[26-Jan-2021 10:35:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/EventServiceProvider.php on line 10
+[26-Jan-2021 10:35:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ensfep5/public_html/finanzas/api/app/Providers/RouteServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Providers/RouteServiceProvider.php on line 8

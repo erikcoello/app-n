@@ -1,0 +1,160 @@
+[28-Oct-2020 07:29:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Alumno.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Alumno.php on line 8
+[28-Oct-2020 07:29:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Attached.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Attached.php on line 7
+[28-Oct-2020 07:29:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Cargo.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Cargo.php on line 7
+[28-Oct-2020 07:29:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CargoAlumno.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CargoAlumno.php on line 7
+[28-Oct-2020 07:30:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Categories.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Categories.php on line 7
+[28-Oct-2020 07:30:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php on line 7
+[28-Oct-2020 07:30:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Ciclo_escolar.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Ciclo_escolar.php on line 7
+[28-Oct-2020 07:30:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CostoSemestre.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CostoSemestre.php on line 7
+[28-Oct-2020 07:30:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Inscripcionfinanza.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Inscripcionfinanza.php on line 7
+[28-Oct-2020 07:30:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Permission.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Permission.php on line 7
+[28-Oct-2020 07:30:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Project.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Project.php on line 7
+[28-Oct-2020 07:30:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Role.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Role.php on line 7
+[28-Oct-2020 07:30:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Semestre.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Semestre.php on line 7
+[28-Oct-2020 07:30:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ensfep5/public_html/finanzas/api/app/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/User.php on line 10
+[26-Jan-2021 10:34:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Alumno.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Alumno.php on line 10
+[26-Jan-2021 10:34:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Attached.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Attached.php on line 7
+[26-Jan-2021 10:34:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Cargo.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Cargo.php on line 7
+[26-Jan-2021 10:34:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CargoAlumno.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CargoAlumno.php on line 7
+[26-Jan-2021 10:34:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CatalogoEspecialidades.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CatalogoEspecialidades.php on line 7
+[26-Jan-2021 10:34:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Categories.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Categories.php on line 7
+[26-Jan-2021 10:34:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CicloEscolar.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CicloEscolar.php on line 7
+[26-Jan-2021 10:34:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php on line 7
+[26-Jan-2021 10:34:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Ciclo_escolar.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Ciclo_escolar.php on line 7
+[26-Jan-2021 10:34:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CostoSemestre.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CostoSemestre.php on line 7
+[26-Jan-2021 10:34:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Credencial.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Credencial.php on line 9
+[26-Jan-2021 10:34:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Fecha.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Fecha.php on line 7
+[26-Jan-2021 10:34:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Ingreso.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Ingreso.php on line 7
+[26-Jan-2021 10:34:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Inscripcionfinanza.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Inscripcionfinanza.php on line 7
+[26-Jan-2021 10:34:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Official - para_fotos.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Official - para_fotos.php on line 10
+[26-Jan-2021 10:34:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Official.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Official.php on line 10
+[26-Jan-2021 10:34:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Permission.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Permission.php on line 7
+[26-Jan-2021 10:34:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Plan_estudios.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Plan_estudios.php on line 7
+[26-Jan-2021 10:34:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Project.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Project.php on line 7
+[26-Jan-2021 10:34:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Role.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Role.php on line 7
+[26-Jan-2021 10:34:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Semestre.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Semestre.php on line 7
+[26-Jan-2021 10:34:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/SemestreCurso.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/SemestreCurso.php on line 7
+[26-Jan-2021 10:34:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ensfep5/public_html/finanzas/api/app/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/User.php on line 10
+[28-Jan-2021 21:30:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/CicloEscolarA.php on line 7
+[28-Jan-2021 21:33:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Alumno.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Alumno.php on line 10
+[28-Jan-2021 21:33:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ensfep5/public_html/finanzas/api/app/Alumno.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Alumno.php on line 10

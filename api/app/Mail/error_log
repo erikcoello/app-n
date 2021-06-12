@@ -1,0 +1,8 @@
+[28-Oct-2020 07:30:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Mail\Mailable' not found in /home/ensfep5/public_html/finanzas/api/app/Mail/MessageReceived.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Mail/MessageReceived.php on line 10
+[26-Jan-2021 10:35:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Mail\Mailable' not found in /home/ensfep5/public_html/finanzas/api/app/Mail/MessageReceived.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ensfep5/public_html/finanzas/api/app/Mail/MessageReceived.php on line 10

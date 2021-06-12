@@ -1,0 +1,73 @@
+@extends('layout')
+
+@section('content')
+
+<div class="row py-lg-2">
+    <div class="col-md-6">
+        <h2>@lang('Lista de Categorias')</h2>
+    </div>
+    <div class="col-md-6"> 
+        <a href=" {{route('categorias.create')}} "class="btn btn-primary btn-lg float-md-right" role="button">Crear Categoría</a>
+</div>
+    
+</div>{{-- row py-lg2 --}}
+    
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Tabla Usuarios</div>
+    <div class="card-body">
+        <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    
+        @include('partials.session-status')
+
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Herramientas</th>
+         </thead>
+            <tfoot>
+        <tr>
+                <th>id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Herramientas</th>
+          
+            </tr>
+            </tfoot>
+
+    </thead>
+    <tbody>
+        <tr>
+         @forelse($categorias as $categoria)
+         <td> {{ $categoria->id }} 
+           </td>
+           <td> {{ $categoria->name }} 
+           </td>
+           <td>{{ $categoria->description }} 
+           <td>             {{-- el parametro $categoria es = $categoria ->id (el id se le pasa a la ruta (web )/alumnos/create/{id}) --}}
+                <a href="{{route('categorias.edit', $categoria) }}"><i class="fa fa-edit"></i></a>
+                    
+                 <form method="POST" action="{{route('categorias.destroy', $categoria)}} " >
+                @csrf @method('DELETE')
+                <button><i class="fas fa-trash-alt"></i></button>
+               </form>
+           </td>
+            </tr>
+               @empty
+            <li>No Hay Categorias para mostrar</li>
+            @endforelse
+          
+    </tbody>
+
+</table>
+    
+ 
+
+
+@endsection
+
